@@ -1,5 +1,3 @@
-(ns spariev.examples)
-
 ;; Based on examples from Clojure wikibooks (http://en.wikibooks.org/wiki/Clojure_Programming),
 ;; licensed under the Creative Commons Attribution/Share-Alike License - http://creativecommons.org/licenses/by-sa/3.0/ 
 
