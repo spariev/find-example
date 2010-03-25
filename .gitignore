@@ -1,0 +1,7 @@
+pom-generated.xml
+Manifest.txt
+find-example.jar
+lib
+classes
+*~
+*#
