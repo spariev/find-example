@@ -4,7 +4,7 @@
 (def *all-examples* (ref []))
 
 (def *examples-url*
-     "http://github.com/spariev/find-examples/raw/master/examples.clj")
+     "http://github.com/spariev/find-example/raw/master/examples.clj")
 
 (defn- load-examples
   [refetch]  
