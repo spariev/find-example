@@ -1,13 +1,20 @@
-(ns spariev.find-example)
+(ns spariev.find-example
+  (:require clojure.contrib.http.agent))
 
 (def *all-examples* (ref []))
+
+(def *examples-url*
+     "http://github.com/spariev/find-examples/raw/master/examples.clj")
 
 (defn- load-examples
   [refetch]  
   (when (or (= 0 (count @*all-examples*)) refetch)
+    (let [new-examples
+	  (read (java.io.PushbackReader.
+		 (java.io.StringReader.
+		  (clojure.contrib.http.agent/string (clojure.contrib.http.agent/http-agent *examples-url*)))))]
       (dosync
-       (alter *all-examples*
-	      (fn [e] (read (java.io.PushbackReader. (java.io.FileReader. "/home/spariev/tmp/examples.clj")))))))
+       (ref-set *all-examples* new-examples))))
   @*all-examples*)
       
 	  
