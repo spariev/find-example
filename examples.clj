@@ -57,4 +57,48 @@
 #^{:example "every" :result true :doc ""}
 (every? #{:a :b} [:a :b])
 
+
+#^{:example "interpose" :result "hi|mum|and|dad" :doc ""}
+(apply str (interpose "|" ["hi" "mum" "and" "dad"]))
+
+#^{:example "interleave" :result (1 :a 2 :b 3 :c) :doc ""}
+(interleave [1 2 3] [:a :b :c])
+
+#^{:example "apply,interpose,reverse" :result "cold am I" :doc ""}
+(apply str (interpose " " (reverse (.split "I am cold" " "))))
+
+#^{:example "butlast" :result (\h \e \l \l) :doc ""}
+(butlast "hello")
+
+#^{:example "replace" :result "heo word"  :doc ""}
+(apply str (replace {\l ""} "hello world"))
+
+#^{:example "conj" :result [1 2 3 4] :doc ""}
+(conj [1 2 3] 4)
+
+#^{:example "conj" :result (\d :a :b :c) :doc ""}
+(conj '(:a :b :c) \d)
+
+#^{:example "map" :result (2 4 6 8)  :doc ""}
+(map + [1 2 3 4] [1 2 3 4])
+
+#^{:example "reduce,filter,range" :result 2500 :doc "sum the odd numbers to 100"}
+(reduce + (filter odd? (range 100)))
+
+#^{:example "->" :result "A-C"  :doc ""}
+(-> "abc" .toUpperCase (.replace "B" "-"))
+
+#^{:example "->" :result (2 3 4) :doc ""}
+(-> true (if inc dec) (map [1 2 3]))
+
+#^{:example "cond" :result 100 :doc ""}
+(#(cond (= 1 %) 1 (> % 1) 100 :else 0) 5)
+
+#^{:example "condp" :result "fun" :doc ""}
+(let [a 5]
+  (condp = a
+    1 "hi"
+    5 "fun"))
+
+
 ]
