@@ -30,8 +30,8 @@ By default, <code>examples.clj</code> file is fetched the first time <code>find-
 ## Installation
 
 Just add
-     [find-example "0.2"]
-to :dev-dependencies in your project.clj, or, if you're not using leiningen, download latest version of find-example.jar from (http://clojars.org/repo/find-example/find-example) and add it to your classpath.
+     [find-example "0.3"]
+to :dev-dependencies in your project.clj, or, if you're not using leiningen, download latest version of find-example.jar from [coljars repository](http://clojars.org/repo/find-example/find-example) and add it to your classpath.
 
 More info on installation can be found at the [clojars page](http://clojars.org/find-example)
 
