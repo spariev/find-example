@@ -1,9 +1,9 @@
 # find-example
 
-find-example is a small utility inspired by clojure.core/find-doc. Given an regexp or string, it searches through examples repository from http://github.com/spariev/find-examples/blob/master/examples.clj and returns example snippets with matching :example and :doc metadata values.
+find-example is a small utility inspired by clojure.core/find-doc. Given an regexp or string, it searches through examples repository at [http://github.com/spariev/find-examples/blob/master/examples.clj] and returns example snippets with matching :example and :doc metadata values.
 
 
-By default, examples file is fetched the first time find-example is called, all subsequent calls do not make network requests. You may explicitly request find-example to refresh example snippets list by setting second parameter to true. 
+By default, <code>examples.clj</code> file is fetched the first time <code>find-example</code> is called, all subsequent calls do not make network requests. You may explicitly request find-example to refresh example snippets list by setting second parameter to true. 
 
 ## Usage
 <pre><code>
@@ -28,6 +28,13 @@ By default, examples file is fetched the first time find-example is called, all 
 ## Installation
 
 Will be available from clojars.org very soon
+
+
+## Contributors are welcomed!
+
+I have added a few examples from Clojure Wikibooks, but as we all know, there is no such thing as too much examples. 
+You can add new examples by the usual github means, or send me a message if you want to be added as a collaborator.
+
 
 ## License
 
