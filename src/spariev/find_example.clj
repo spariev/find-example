@@ -23,7 +23,7 @@
   [v]
   (println "-------------------------")
   (println "Example for" (:example (meta v)))
-  (println (:doc (meta v)))
+  (println (or (:doc (meta v)) ""))
   (binding [*print-right-margin* 40]
     (with-pprint-dispatch *code-dispatch* (pprint v)))
   (print "=> ")
