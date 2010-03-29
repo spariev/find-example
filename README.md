@@ -7,9 +7,9 @@ By default, <code>examples.clj</code> file is fetched the first time <code>find-
 
 ## Usage
 <pre><code>
-	(use '([spariev.find-example :as fe]))
+	(use '(spariev.find-example))
         
-	user> (fe/find-example "loop")
+	user> (find-example "loop")
 	-------------------------
 	 Example for loop
 	computes the factorial of 5 with loop/recur
@@ -17,14 +17,14 @@ By default, <code>examples.clj</code> file is fetched the first time <code>find-
 	=> 120
 	nil
 		
-	user> (spariev.find-example/find-example "nth" true) ;; refetches recent version of examples from github
+	user> (find-example "nth" true) ;; refetches recent version of examples from github
 	-------------------------
 	Example for nth,random
 	nth selects a value from the vector of words we supplied, in this case we called rand to get a number between 0 (inclusive) and 5 (exclusive).
 	(nth ["hello" "bye" "foo" "bar" "baz"] (rand 5))
 	=> hello
 	nil
-</pre></code>  	
+</pre></code>	
 ## Installation
 
 Will be available from clojars.org very soon
