@@ -7,7 +7,7 @@ By default, <code>examples.clj</code> file is fetched the first time <code>find-
 
 ## Usage
 <pre><code>
-	(use '(spariev.find-example))
+	(use 'spariev.find-example)
         
 	user> (find-example "loop")
 	-------------------------
@@ -24,19 +24,23 @@ By default, <code>examples.clj</code> file is fetched the first time <code>find-
 	(nth ["hello" "bye" "foo" "bar" "baz"] (rand 5))
 	=> hello
 	nil
-</pre></code>	
+</pre></code>
+
+
 ## Installation
 
-Will be available from clojars.org very soon
+Just add
+     [find-example "0.1"]
+to :dev-dependencies in your project.clj, or, if you're not using leiningen, download latest version of find-example.jar from (http://clojars.org/repo/find-example/find-example) and add it to your classpath.
 
+More info on installation can be found at the [clojars page](http://clojars.org/find-example)
 
-## Contributors are welcomed!
+## Contributions are welcomed!
 
-I have added a few examples from Clojure Wikibooks, but as we all know, there is no such thing as too much examples. 
-You can add new examples by the usual github means, or send me a message if you want to be added as a collaborator.
+I've added a few examples from Clojure Wikibooks, but as we all know, there is no such thing as too much examples. 
+You can submit new examples by the usual github means, or send me a message if you want to be added as a collaborator.
 
 
 ## License
 
-Examples (which are mostly based on examples from Clojure wikibooks (http://en.wikibooks.org/wiki/Clojure_Programming)) and code are licensed under the Creative Commons Attribution/Share-Alike License - http://creativecommons.org/licenses/by-sa/3.0
- 
+Examples (which are mostly based on examples from [Clojure wikibooks](http://en.wikibooks.org/wiki/Clojure_Programming)) and code are licensed under the [Creative Commons Attribution/Share-Alike License](http://creativecommons.org/licenses/by-sa/3.0)
